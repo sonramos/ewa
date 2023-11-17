@@ -1,0 +1,28 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "teste",
+      "phone": "88888888888",
+      "address": "teste",
+      "manager": "teste",
+      "status": false
+    },
+    {
+      "id": 2,
+      "name": "teste2",
+      "phone": "00000000000",
+      "address": "teste2",
+      "manager": "teste2",
+      "status": true
+    },
+    {
+      "id": 3,
+      "name": "teste3",
+      "phone": "77777777777",
+      "address": "teste3",
+      "manager": "teste3",
+      "status": false
+    }
+  ]
+}
