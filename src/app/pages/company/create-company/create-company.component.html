@@ -1,0 +1,53 @@
+<div class="mt-5 align-items-center d-flex justify-content-center">
+  <div>
+    <h1>New company</h1>
+
+      <form [formGroup]="formGroup" class="row example-form mt-4 " (ngSubmit)="createCompany()">
+
+        <!-- Input Company's name -->
+        <small class="text-danger mb-2" *ngIf="formGroup.get('nome')?.errors &&
+            formGroup.get('nome')?.hasError('required')">Required value</small>
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name">
+        </mat-form-field>
+
+        <!-- Input Company's phone -->
+        <small class="text-danger mb-2" *ngIf="formGroup.get('phone')?.errors &&
+            formGroup.get('phone')?.hasError('required')">Required value</small>
+        <mat-form-field class="example-full-width">
+          <mat-label>Phone</mat-label>
+          <input matInput formControlName="phone" mask="(00)00000-0000" placeholder="(XX)XXXXX-XXXX">
+        </mat-form-field>
+
+        <!-- Input Company's address -->
+        <small class="text-danger mb-2" *ngIf="formGroup.get('address')?.errors &&
+            formGroup.get('address')?.hasError('required')">Required value</small>
+        <mat-form-field class="example-full-width">
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="address">
+        </mat-form-field>
+
+        <!-- Input Company's manager -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Manager</mat-label>
+          <input matInput formControlName="manager">
+        </mat-form-field>
+
+        <!-- Status control -->
+        <section class="example-section">
+          <mat-checkbox class="example-margin" formControlName="status">
+            <span class="text-black">Active</span>
+          </mat-checkbox>
+        </section>
+
+        <!-- Submit form -->
+        <div class="d-flex justify-content-center">
+          <button [disabled] ="!formGroup.valid" type="submit" mat-raised-button color="primary">
+            Submit
+          </button>
+<!--          <button type="reset"-->
+        </div>
+      </form>
+  </div>
+</div>

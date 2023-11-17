@@ -4,5 +4,5 @@ export interface Company {
   phone: string,
   address: string,
   manager: string,
-  isActive: boolean
+  status: boolean
 }

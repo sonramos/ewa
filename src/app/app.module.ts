@@ -6,26 +6,33 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from "./shared/material/material.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { CompanyComponent } from './company/company.component';
-import { PopupComponent } from './popup/popup.component';
-import {MatTableModule} from "@angular/material/table";
+import {HttpClientModule} from "@angular/common/http";
+import {NgxMaskDirective, NgxMaskPipe, provideNgxMask} from "ngx-mask";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {CompanyModule} from "./pages/company/company.module";
+import {MenuModule} from "./layout/menu.module";
+import {PipesModule} from "./shared/pipes/pipes.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    CompanyComponent,
-    PopupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    MatTableModule
+    HttpClientModule,
+    MaterialModule,
+    NgxMaskDirective,
+    NgxMaskPipe,
+    NgbModule,
+    CompanyModule,
+    MenuModule,
+    PipesModule
   ],
-  providers: [],
+  providers: [provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
