@@ -6,7 +6,7 @@
       "phone": "88888888888",
       "address": "teste",
       "manager": "teste",
-      "status": false
+      "status": true
     },
     {
       "id": 2,
@@ -14,15 +14,15 @@
       "phone": "00000000000",
       "address": "teste2",
       "manager": "teste2",
-      "status": true
+      "status": false
     },
     {
       "id": 3,
-      "name": "teste3",
-      "phone": "77777777777",
-      "address": "teste3",
-      "manager": "teste3",
-      "status": false
+      "name": "1231321",
+      "phone": "11111111111",
+      "address": "111111",
+      "manager": "1212",
+      "status": true
     }
   ]
 }
