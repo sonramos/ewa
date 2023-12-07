@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {CompanyModule} from "./pages/company/company.module";
 import {MenuModule} from "./layout/menu.module";
 import {PipesModule} from "./shared/pipes/pipes.module";
+import {FirestoreModule} from "./firestore/firestore.module";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {PipesModule} from "./shared/pipes/pipes.module";
     NgbModule,
     CompanyModule,
     MenuModule,
-    PipesModule
+    PipesModule,
+    FirestoreModule
   ],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent]

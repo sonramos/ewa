@@ -23,6 +23,14 @@
       "address": "111111",
       "manager": "1212",
       "status": true
+    },
+    {
+      "id": 4,
+      "name": "teste",
+      "phone": "11888811111",
+      "address": "endereço teste",
+      "manager": "",
+      "status": true
     }
   ]
 }
