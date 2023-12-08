@@ -1,6 +1,6 @@
 <div class="mt-5 align-items-center d-flex justify-content-center">
   <div>
-    <h1>New company</h1>
+    <h1>Create company</h1>
 
       <form [formGroup]="formGroup" class="row example-form mt-4 " (ngSubmit)="createCompany()">
 
@@ -17,7 +17,7 @@
             formGroup.get('phone')?.hasError('required')">Required value</small>
         <mat-form-field class="example-full-width">
           <mat-label>Phone</mat-label>
-          <input matInput formControlName="phone" mask="(00)00000-0000" placeholder="(XX)XXXXX-XXXX">
+          <input matInput formControlName="phone" mask="(00)0000-0000||(00)00000-0000">
         </mat-form-field>
 
         <!-- Input Company's address -->
