@@ -8,11 +8,12 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class CompanyService {
-  api = `${environment.api}companies/`;
-
+  api = `${environment.api}companies`;
+  
   constructor(private httpClient: HttpClient) {}
 
   insert(newCompany: Company): Observable<Company> {
+    console.log(this.api);
     return this.httpClient.post<Company>(this.api, newCompany);
   }
 
@@ -25,15 +26,15 @@ export class CompanyService {
   }*/
 
   delete(id: number): Observable<object>{
-    return this.httpClient.delete(`${this.api}${id}`)
+    return this.httpClient.delete(`${this.api}/${id}`)
   }
 
   update(company: Company): Observable<object>{
-    return this.httpClient.put(`${this.api}${company.id}`, company);
+    return this.httpClient.put(`${this.api}/${company.id}`, company);
   }
 
   getById(id: number): Observable<Company> {
-    return this.httpClient.get<Company>(`${this.api}${id}`);
+    return this.httpClient.get<Company>(`${this.api}/${id}`);
   }
 
 }
