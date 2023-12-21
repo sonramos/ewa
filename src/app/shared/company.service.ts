@@ -20,9 +20,9 @@ export class CompanyService {
     return this.httpClient.get<Company[]>(this.api);
   }
 
-  pagedList(page: number, pageSize: number):Observable<Company> {
+  /*pagedList(page: number, pageSize: number):Observable<Company> {
     return this.httpClient.get<Company>(`${this.api}?page=${page}&pageSize=${pageSize}`);
-  }
+  }*/
 
   delete(id: number): Observable<object>{
     return this.httpClient.delete(`${this.api}${id}`)
@@ -32,7 +32,7 @@ export class CompanyService {
     return this.httpClient.put(`${this.api}${company.id}`, company);
   }
 
-  searchById(id: number): Observable<Company> {
+  getById(id: number): Observable<Company> {
     return this.httpClient.get<Company>(`${this.api}${id}`);
   }
 

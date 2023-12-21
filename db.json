@@ -14,7 +14,7 @@
       "phone": "00000000000",
       "address": "teste2",
       "manager": "teste2",
-      "status": false
+      "status": true
     },
     {
       "id": 3,
@@ -28,8 +28,8 @@
       "id": 4,
       "name": "teste",
       "phone": "11888811111",
-      "address": "endereço teste",
-      "manager": "",
+      "address": "mudei aqui",
+      "manager": "mudei aqui",
       "status": true
     }
   ]

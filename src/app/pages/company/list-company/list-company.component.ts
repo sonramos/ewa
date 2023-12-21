@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {Company} from "../../../shared/model/company";
 import {MatTableDataSource} from "@angular/material/table";
-import {CompanyFirestoreService} from "../../../shared/services/company-firestore.service";
+//import {CompanyFirestoreService} from "../../../shared/services/company-firestore.service";
 import {Observable} from "rxjs";
 import Swal from "sweetalert2";
+import {CompanyService} from "../../../shared/company.service";
 
 @Component({
   selector: 'app-list-company',
@@ -19,7 +20,7 @@ export class ListCompanyComponent implements OnInit {
     this.list();
   }
 
-  constructor(private companyService: CompanyFirestoreService) {
+  constructor(private companyService: CompanyService) {
 
   }
 
@@ -33,7 +34,7 @@ export class ListCompanyComponent implements OnInit {
     );
   }
 
-  delete(id:string){
+  delete(id:number){
     // Swal.fire({
     //   title: 'Confirm Deletion',
     //   text: "Delete this item?",

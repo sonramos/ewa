@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-// import {CompanyService} from "../../../shared/company.service";
+import {CompanyService} from "../../../shared/company.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Company} from "../../../shared/model/company";
 import Swal from 'sweetalert2';
-import {CompanyFirestoreService} from "../../../shared/services/company-firestore.service";
+//import {CompanyFirestoreService} from "../../../shared/services/company-firestore.service";
 
 @Component({
   selector: 'app-create-company',
@@ -15,7 +15,7 @@ export class CreateCompanyComponent implements OnInit{
 
   formGroup: FormGroup;
   update;
-  constructor(private companyService: CompanyFirestoreService, private router: Router, private route: ActivatedRoute) {
+  constructor(private companyService: CompanyService, private router: Router, private route: ActivatedRoute) {
     this.formGroup = new FormGroup({
       id: new FormControl(null),
       name: new FormControl('', Validators.required),
